@@ -33,6 +33,7 @@ resource "google_compute_firewall" "bastion52-ssh" {
   }
   direction = "INGRESS"
   target_tags = ["bastion", "public", "private"]
+  source_ranges = ["0.0.0.0/0"]
 }
 
 resource "google_compute_firewall" "bastion52-http" {
@@ -43,5 +44,6 @@ resource "google_compute_firewall" "bastion52-http" {
     ports    = ["80"]
   }
   direction = "INGRESS"
+  source_ranges = ["0.0.0.0/0"]
 }
 

@@ -25,4 +25,5 @@ resource "google_compute_firewall" "workhorse-rules" {
     ports    = ["8080"]
   }
   direction = "INGRESS"
+  source_ranges = ["0.0.0.0/0"]
 }
