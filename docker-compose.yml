@@ -23,8 +23,6 @@ services:
         limits:
           cpus: '1'
           memory: 4G
-    links: 
-      - bot
   bot:
     image: reeezos/cyberyulia:0.0.1
     ports:
